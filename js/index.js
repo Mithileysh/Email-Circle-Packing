@@ -1,7 +1,7 @@
 // This is a more complicated version.
 
 // The Dataset consists of:
-// year,player,appearance,goals,goals_per_game, assists,assists_per_game  
+// year,player,appearance,goals,goals_per_game, assists,assists_per_game
 
 // If you click on the year, it will zoom in.
 
@@ -19,7 +19,7 @@
         //*************************************************
         // GET THE CSV DATA
         //*************************************************
-        d3.csv("https://s3-us-west-2.amazonaws.com/s.cdpn.io/565729/Football_Data.csv", function(error, data) {
+        d3.csv("https://raw.githubusercontent.com/Mithileysh/Email-Circle-Packing/master/Football_Data.csv", function(error, data) {
 
             _.each(data, function(element, index, list) {
                 element.pop = +element.pop;
@@ -95,7 +95,7 @@
                 if (typeof d.player != 'undefined'){
                     var textName = d.player;
                 }else{
-                var textName = d.name; 
+                var textName = d.name;
                 }
                 return textName;
             });
